@@ -1,3 +1,35 @@
+/* ---------------------------------- IMPORTING FONTS ------------------------------------ */
+@font-face {
+  font-family: acumin-pro-regular;
+  src: url(/fonts/Acumin-RPro.woff);
+}
+
+@font-face {
+  font-family: acumin-pro-bold;
+  src: url(/fonts/Acumin-BdPro.woff);
+}
+
+/* ---------------------------------- VARIABLES ------------------------------------ */
+:root {
+  /* Colors */
+  --primary-color: #66b127;
+  --secondary-color: #409f47;
+  --dark-text-color: #191a1b;
+  --light-text-color: #fff;
+  --input-border-color: #acacac;
+  --input-placeholder-color: #949494;
+
+  /* Fonts */
+  --heading-font: acumin-pro-bold;
+  --regular-font: acumin-pro-regular;
+
+  /* Other */
+  --input-height: 48px;
+  --border-radius: 4px;
+  --input-padding: 14px 40px 14px 16px;
+}
+
+/* ---------------------------------- GLOBAL STYLES ------------------------------------ */
 * {
   margin: 0;
   padding: 0;
