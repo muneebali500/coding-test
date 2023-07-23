@@ -1,0 +1,30 @@
+.login-form__input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.login-form__input-group .input-field {
+  width: 100%;
+  height: var(--input-height);
+  padding: var(--input-padding);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-border-color);
+  outline: none;
+}
+
+.login-form__input-group input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: var(--input-placeholder-color);
+}
+
+.login-form__input-group .input-icon {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,80 @@
+.login-form {
+  max-width: 364px;
+  margin: 140px auto 0;
+  flex: 1;
+}
+
+.company-logo {
+  width: 174px;
+  height: 40.61px;
+  margin-bottom: 60.29px;
+}
+
+.login-form__heading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #191a1b;
+  margin-bottom: 69.71px;
+}
+
+.login-remember__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.login-remember__wrapper label {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.login-remember__wrapper label input {
+  margin-right: 8px;
+}
+
+.login-remember__wrapper h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #409f47;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  height: 48px;
+  padding: 16px 135px 16px 135px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  background-color: #66b127;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 6px 10px #66b12724;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  background-color: #3d6e14;
+}
+
+/*---------------------------------------- MEDIA QUERIES ---------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* @media only screen and (max-width: 768px) {
+  .login-form {
+    margin: 40px auto 0;
+  }
+} */
+
+@media only screen and (max-width: 640px) {
+  .login-form {
+    width: 100%;
+    margin-top: 100px;
+  }
+}

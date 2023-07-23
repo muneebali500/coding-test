@@ -1,0 +1,196 @@
+/* ---------------------------------- IMPORTING FONTS ------------------------------------ */
+@font-face {
+  font-family: acumin-pro-regular;
+  src: url(../public/fonts/Acumin-RPro.woff);
+}
+
+@font-face {
+  font-family: acumin-pro-bold;
+  src: url(../public/fonts/Acumin-BdPro.woff);
+}
+
+/* ---------------------------------- VARIABLES ------------------------------------ */
+:root {
+  /* Colors */
+  --primary-color: #66b127;
+  --secondary-color: #409f47;
+  --dark-text-color: #191a1b;
+  --light-text-color: #fff;
+  --input-border-color: #acacac;
+  --input-placeholder-color: #949494;
+
+  /* Fonts */
+  --heading-font: acumin-pro-bold;
+  --regular-font: acumin-pro-regular;
+
+  /* Other */
+  --input-height: 48px;
+  --border-radius: 4px;
+  --input-padding: 14px 40px 14px 16px;
+}
+
+/* ------------------------------- LOGIN PAGE CUSTOM STYLES ------------------------------ */
+.login-user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-page {
+  max-width: 1440px;
+  padding: 16px;
+  display: flex;
+  font-family: var(--regular-font);
+}
+
+.login-page .left-side {
+  position: relative;
+  width: 684px;
+  max-width: 90%;
+  height: 992px;
+}
+
+.login-page .left-side__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.login-page .left-side__text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  width: 480px;
+  max-width: 90%;
+  margin: 128px auto 0;
+}
+
+.login-page .left-side__text--heading {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 20px;
+}
+
+.login-page .left-side__text--description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+}
+
+.login-page .right-side {
+  position: relative;
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side__footer {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.right-side__footer-nav {
+  max-width: 364px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side__footer-nav--item {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+}
+
+.right-side__footer-nav--item a {
+  color: #949494;
+}
+
+/*---------------------------------------- MEDIA QUERIES ---------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  .login-page .left-side {
+    height: 700px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .login-page .left-side {
+    min-height: calc(100vh - 32px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login-page .left-side__text h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .login-page {
+    min-height: 100vh;
+  }
+
+  .login-page .left-side {
+    display: none;
+  }
+
+  .login-page .right-side {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .right-side__footer {
+    margin-bottom: 0px;
+    margin-top: 80px;
+  }
+}
+
+/*---------------------------------------- DARK THEME STYLING ----------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------- */
+
+.left-side__text--description.dark,
+.login-remember__wrapper.dark label {
+  color: var(--input-placeholder-color);
+}
+
+.left-side__text--heading.dark {
+  color: var(--light-text-color);
+}
+
+.right-side .company-logo.dark {
+  margin-bottom: 20px;
+}
+
+.right-side .login-form__heading.dark {
+  color: var(--light-text-color);
+  margin-bottom: 56.43px;
+}
+
+.right-side .login-form__input-group .input-field.dark {
+  color: var(--input-border-color);
+  border-color: var(--input-border-color);
+  background-color: #131b15;
+}
+
+.right-side .login-remember__wrapper.dark h5 {
+  color: var(--secondary-color);
+}
+
+.right-side .login-btn.dark {
+  background-color: var(--primary-color);
+  color: var(--dark-text-color);
+}
+
+.login-user.dark {
+  color: var(--light-text-color);
+}

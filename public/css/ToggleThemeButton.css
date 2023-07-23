@@ -1,0 +1,11 @@
+.theme-container .theme-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.theme-container .fa-moon {
+  color: #ffffff;
+}
