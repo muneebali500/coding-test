@@ -1,17 +1,17 @@
 import { useContext } from "react";
 
+////////////// IMPORTING CONTEXT /////////////////////
+import { ThemeContext } from "../context/ThemeContext";
+
+///////////// IMPORTING IMAGES ////////////////////
+import sunIcon from "/images/sun.png";
+// import moonIcon from "/images/moon.png";
+
 ///////////// IMPORTING CUSTOM STYLES /////////////////
 import "../../public/css/ToggleThemeButton.css";
 
-///////////// IMPORTING IMAGES ////////////////////
-import sunIcon from "../../public/images/sun.png";
-// import moonIcon from "../../public/images/moon.png";
-
-////////////// IMPORTING CONTEXT /////////////////////
-import { AuthContext } from "../context/AuthContext";
-
 const ThemeToggleButton = () => {
-  const { darkTheme, setDarkTheme } = useContext(AuthContext);
+  const { darkTheme, setDarkTheme } = useContext(ThemeContext);
 
   return (
     <>

@@ -1,33 +1,32 @@
 import { useContext } from "react";
 
+///////////////// IMPORTING COMPONENTS /////////////////
+import InputField from "./InputField";
+
+///////////////// IMPORTING CONTEXTS /////////////////
+import { AuthContext } from "../context/AuthContext";
+import { ThemeContext } from "../context/ThemeContext";
+
+///////////////// IMPORTING IMAGES ////////////////////
+import companyLogoDark from "/images/logo-dark.png";
+import companyLogoLight from "/images/logo-light.png";
+import userIconDark from "/images/user-dark.png";
+import userIconLight from "/images/user.png";
+import eyeIconDark from "/images/eye-dark.png";
+import eyeIconLight from "/images/eye.png";
+
 ///////////// IMPORTING CUSTOM STYLES /////////////////
 import "../../public/css/LoginForm.css";
 
-///////////////// IMPORTING IMAGES ////////////////////
-import companyLogoDark from "../../public/images/logo-dark.png";
-import companyLogoLight from "../../public/images/logo-light.png";
-import userIconDark from "../../public/images/user-dark.png";
-import userIconLight from "../../public/images/user.png";
-import eyeIconDark from "../../public/images/eye-dark.png";
-import eyeIconLight from "../../public/images/eye.png";
-
-///////////////// IMPORTING COMPONENTS /////////////////
-import InputField from "./InputField";
-import { AuthContext } from "../context/AuthContext";
-
 //////////////// START OF MAIN FUNCTION ////////////////
 const LoginForm = () => {
-  const {
-    darkTheme,
-    userName,
-    setUserName,
-    password,
-    setPassword,
-    handleSubmit,
-  } = useContext(AuthContext);
+  const { userName, setUserName, password, setPassword, handleLogin } =
+    useContext(AuthContext);
+
+  const { darkTheme } = useContext(ThemeContext);
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleLogin}>
       <figure className={`company-logo ${darkTheme && "dark"}`}>
         <img
           src={darkTheme ? companyLogoDark : companyLogoLight}

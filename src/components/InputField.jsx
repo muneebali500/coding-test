@@ -1,12 +1,12 @@
 import { useContext } from "react";
 
+import { ThemeContext } from "../context/ThemeContext";
+
 ///////////// IMPORTING CUSTOM STYLES /////////////////
 import "../../public/css/InputField.css";
 
-import { AuthContext } from "../context/AuthContext";
-
 const InputField = ({ type, placeholder, value, onChange, iconSrc, alt }) => {
-  const { darkTheme } = useContext(AuthContext);
+  const { darkTheme } = useContext(ThemeContext);
 
   return (
     <div className="login-form__input-group">

@@ -1,4 +1,4 @@
-import { useState, useContext, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 import { userData } from "../data";
 
 const AuthContext = createContext();
@@ -8,19 +8,9 @@ function AuthProvider({ children }) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
-  const [darkTheme, setDarkTheme] = useState(false);
-
-  ////////////////// FUNCTION TOGGLES BODY BACKGROUND BASED ON THEME STATE
-  useEffect(() => {
-    if (darkTheme) {
-      document.body.style.backgroundColor = "#131b15";
-    } else {
-      document.body.style.backgroundColor = "#ffffff";
-    }
-  }, [darkTheme]);
 
   //////// FUNCTION SUBMITS LOGIN DATA AND CHANGES THE LOGIN STATE
-  function handleSubmit(e) {
+  function handleLogin(e) {
     e.preventDefault();
 
     const user = userData.find(
@@ -43,9 +33,7 @@ function AuthProvider({ children }) {
         password,
         setPassword,
         loggedIn,
-        darkTheme,
-        setDarkTheme,
-        handleSubmit,
+        handleLogin,
       }}
     >
       {children}
